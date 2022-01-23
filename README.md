@@ -8,22 +8,21 @@
 * [Steps](#steps)
 
 ## General info
-This project is written to test the ToDo MVC feature.
+This project is written to test the ToDo MVC feature. 
 	
 ## Technologies
 Project is created with:
-* Eclipse: Version: 2021-12 (4.22.0)
 * java: Version "1.8.0_321"
 * cucumber-java : Version 7.2.3
-* junit : Version 4.13.1
 * cucumber-junit : Version 7.2.3
 * selenium-java : Version 4.1.1
+* junit : Version 4.13.1
 	
 ## Prerequisites
 System installed with
-* Java
-* Eclipse
-* Maven plugin with the following dependencies in pom.xml
+* Java Version "1.8.0_321"
+* Eclipse Version: 2021-12 (4.22.0)
+* Install the Maven plugin in eclipse and add the following dependencies in pom.xml
 ```
 <dependencies>
 <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
@@ -60,9 +59,9 @@ System installed with
 ```
 ## Contents
 
-Cucumber feature file with the Test Steps and scenarios : src/test/resources/Features/todo.feature
+Cucumber feature file with the Gherkins Given-When-Then scenarios : src/test/resources/Features/todo.feature
 
-Java Steps definition : src\test\java\StepDefinitions\todoSteps.java
+Java Steps definition or Implementation : src\test\java\StepDefinitions\todoSteps.java
 
 Junit Test runner file : src\test\java\StepDefinitions\TestRunner.java
 
@@ -78,11 +77,16 @@ Reports after test run generated in : target\cucumberReports\report.json
                                       
 ## Steps
 
-1. Select the browser in src\test\java\StepDefinitions\todoSteps.java as "chrome" or "firefox"
+1. Select the browser in src\test\java\StepDefinitions\todoSteps.java as "chrome" or "firefox" as
 ```
 String webdriver = "chrome";
 ```
+or
+```
+String webdriver = "firefox";
+```
 2. Run file src\test\java\StepDefinitions\TestRunner.java
+3. The reports are generated in 3 formats in the 'target' folder - html, json and xml along with screenshots for failed scenarios.
 
 
 
