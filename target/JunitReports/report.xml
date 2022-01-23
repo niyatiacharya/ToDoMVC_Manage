@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="11" time="217.211">
+    <testcase classname="Manage Todo List" name="Adding a task to an empty list" time="26.302">
+        <system-out><![CDATA[Given the todoMVC site is open in the browser...............................passed
+Given a list with 0 tasks...................................................passed
+When a task is added........................................................passed
+Then 1 task is visible in the list..........................................passed
+And the number of items counter is set to 1.................................passed
+And the filters are displayed...............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Manage Todo List" name="Adding a task to a non-empty list" time="13.026">
+        <system-out><![CDATA[Given the todoMVC site is open in the browser...............................passed
+Given a list with 1 tasks...................................................passed
+When a task is added........................................................passed
+Then 2 task is visible in the list..........................................passed
+And the number of items counter is set to 2.................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Manage Todo List" name="Editing a task" time="13.622">
+        <system-out><![CDATA[Given the todoMVC site is open in the browser...............................passed
+Given a list with 1 tasks...................................................passed
+When the task is edited.....................................................passed
+Then the edited task is visible in the list.................................passed
+And the number of items counter is set to 1.................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Manage Todo List" name="Completing a task" time="13.297">
+        <system-out><![CDATA[Given the todoMVC site is open in the browser...............................passed
+Given a list with 2 tasks...................................................passed
+When 1 task is marked as completed..........................................passed
+Then the task is checked off from the list..................................passed
+And the number of items counter is set to 1.................................passed
+And the option to clear completed tasks is available........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Manage Todo List" name="Filter tasks" time="23.293">
+        <system-out><![CDATA[Given the todoMVC site is open in the browser...............................passed
+Given a list with 2 tasks...................................................passed
+And 1 task is marked as completed...........................................passed
+When "Active" filter is selected............................................passed
+Then "Active" tasks are displayed...........................................passed
+And the number of items counter is set to 1.................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Manage Todo List" name="Filter tasks 2" time="13.672">
+        <system-out><![CDATA[Given the todoMVC site is open in the browser...............................passed
+Given a list with 2 tasks...................................................passed
+And 1 task is marked as completed...........................................passed
+When "Completed" filter is selected.........................................passed
+Then "Completed" tasks are displayed........................................passed
+And the number of items counter is set to 1.................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Manage Todo List" name="Filter tasks 3" time="15.702">
+        <system-out><![CDATA[Given the todoMVC site is open in the browser...............................passed
+Given a list with 2 tasks...................................................passed
+And 1 task is marked as completed...........................................passed
+When "All" filter is selected...............................................passed
+Then "All" tasks are displayed..............................................passed
+And the number of items counter is set to 1.................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Manage Todo List" name="Clear Completed tasks" time="23.975">
+        <system-out><![CDATA[Given the todoMVC site is open in the browser...............................passed
+Given a list with 2 tasks...................................................passed
+And 1 task is marked as completed...........................................passed
+When completed tasks are cleared............................................passed
+Then the completed tasks are not displayed..................................passed
+But the active tasks are displayed..........................................passed
+And the number of items counter is set to 1.................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Manage Todo List" name="Delete task" time="25.812">
+        <system-out><![CDATA[Given the todoMVC site is open in the browser...............................passed
+Given a list with 2 tasks...................................................passed
+And 1 task is marked as completed...........................................passed
+When "Completed" task is deleted............................................passed
+Then "Completed" tasks is not displayed.....................................passed
+And the number of items counter is set to 1.................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Manage Todo List" name="Delete task 2" time="25.285">
+        <system-out><![CDATA[Given the todoMVC site is open in the browser...............................passed
+Given a list with 2 tasks...................................................passed
+And 1 task is marked as completed...........................................passed
+When "Active" task is deleted...............................................passed
+Then "Active" tasks is not displayed........................................passed
+And the number of items counter is set to 0.................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Manage Todo List" name="Mark all tasks as completed" time="22.881">
+        <system-out><![CDATA[Given the todoMVC site is open in the browser...............................passed
+Given a list with 2 tasks...................................................passed
+When All the tasks are marked completed.....................................passed
+Then the tasks are checked off from the list................................passed
+And the number of items counter is set to 0.................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
